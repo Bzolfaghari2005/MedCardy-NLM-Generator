@@ -1,0 +1,55 @@
+# NLM Audio Generator – Python dependencies
+# Python 3.12 recommended
+
+# ── UI ──────────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── PDF ─────────────────────────────────────────────────────────────────────
+PyMuPDF>=1.24.0
+
+# ── NotebookLM (with browser login support) ─────────────────────────────────
+notebooklm-py[browser,cookies]>=0.7.3
+
+# ── Speech-to-text (local) ───────────────────────────────────────────────────
+faster-whisper>=1.0.0
+
+# ── GPU support (optional, for CUDA inference) ──────────────────────────────
+# Install PyTorch with CUDA manually: https://pytorch.org/get-started/locally/
+# Example (CUDA 12.1):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# ── External tools (installed separately, not via pip) ───────────────────────
+# FFmpeg: https://ffmpeg.org/download.html
+#   Windows: download pre-built binary, add bin/ to PATH
+#   Or set FFMPEG_PATH environment variable to ffmpeg.exe path
+
+# ── Word Booklet Maker ───────────────────────────────────────────────────────
+python-docx>=1.1.0
+markdown-it-py>=3.0.0
+
+# ── AI Folder Processor ──────────────────────────────────────────────────────
+# GapGPT / OpenAI-compatible API client
+# Install normally:
+#   pip install openai
+# If international internet is disrupted (Mirror by Runflare, unrelated to GapGPT):
+#   pip install openai -i https://mirror-pypi.runflare.com/simple
+openai>=1.30.0
+
+# API key loading from .env file
+python-dotenv>=1.0.0
+
+# Encoding detection for text files
+charset-normalizer>=3.3.0
+
+# Office document extraction
+python-pptx>=0.6.23
+openpyxl>=3.1.0
+
+# HTML text extraction
+beautifulsoup4>=4.12.0
+
+# File type detection
+filetype>=1.2.0
+
+# ── Standard library only (no pip install needed) ───────────────────────────
+# asyncio, multiprocessing, pathlib, sqlite3, subprocess, hashlib, zipfile, json
